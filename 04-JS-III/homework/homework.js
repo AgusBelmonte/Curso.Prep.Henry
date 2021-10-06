@@ -237,9 +237,9 @@ function continueStatement(numero) {
     if (i === 5) {
       continue;
     }
-    nuevo.push(numero=numero+2)
+    nuevo.push((numero = numero + 2));
   }
-  return nuevo
+  return nuevo;
 }
 
 // No modificar nada debajo de esta línea
