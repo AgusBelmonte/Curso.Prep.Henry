@@ -134,6 +134,11 @@ function sumarLikesDeUsuario(usuario) {
     suma = suma + usuario.posts[i].likes;
   }
   return suma;
+  /*
+ return usuario.posts.reduce(function(acc, cur)){
+  return acc + cur.likes;
+ } ,0)  
+  */
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -147,9 +152,9 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   producto.calcularPrecioDescuento = function () {
-    return this.precio - (this.precio * this.porcentajeDeDescuento);
+    return this.precio - this.precio * this.porcentajeDeDescuento;
   };
-  return producto
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
